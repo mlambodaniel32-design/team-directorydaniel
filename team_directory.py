@@ -26,6 +26,7 @@ def sort_by_name(team):
 
 if __name__ == "__main__":
     team = load_team()
+    team = sort_by_name(team)
     display_team(team)
     print(f"\nTotal members: {len(team)}")
 
