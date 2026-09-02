@@ -21,8 +21,12 @@ def search_by_name(team, query):
 def filter_by_role(team, role):
     return [m for m in team if m["role"].lower() == role.lower()]
 
+def sort_by_name(team):
+    return sorted(team, key=lambda m: m["name"].lower())
+
 if __name__ == "__main__":
     team = load_team()
+    team = sort_by_name(team)
     display_team(team)
     print(f"\nTotal members: {len(team)}")
 
